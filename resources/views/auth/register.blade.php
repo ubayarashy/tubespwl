@@ -1,44 +1,55 @@
 <x-guest-layout>
-    <div class="flex items-center justify-center">
-        <div class="bg-white p-6 rounded-lg shadow-lg w-full max-w-md">
-            <h2 class="text-center text-2xl font-bold text-gray-800 mb-6">MENTOR Kita</h2>
+    <div class="flex flex-col items-center mb-4"> {{-- Container untuk logo dan teks --}}
+        <a href="/">
+            {{-- Ganti 'mentor-kita-logo.png' dengan nama file logo Anda --}}
+            <img src="{{ asset('images/tes.png') }}" alt="Mentor Kita Logo" class="w-24 h-24 mb-2">
+        </a>
+        <h1 class="text-2xl font-bold text-gray-800">MENTOR Kita</h1> {{-- Teks di bawah logo --}}
+    </div>
 
-            <form method="POST" action="{{ route('register') }}">
-                @csrf
+    {{-- Container formulir dengan styling baru --}}
+    <div class="w-full sm:max-w-md mt-6 px-6 py-6 bg-white shadow-lg rounded-2xl">
+        <form method="POST" action="{{ route('register') }}">
+            @csrf
 
-                <!-- Username -->
-                <div class="mb-4">
-                    <x-input-label for="username" :value="__('Username')" class="text-gray-700" />
-                    <x-text-input id="username" class="block w-full mt-1 p-2 bg-gray-200 border border-gray-300 rounded-md focus:border-blue-300 focus:ring-0" type="text" name="username" :value="old('username')" required autofocus />
-                    <x-input-error :messages="$errors->get('username')" class="mt-2" />
-                </div>
+            <div>
+                <x-input-label for="name" :value="__('Name')" />
+                <x-text-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
+                <x-input-error :messages="$errors->get('name')" class="mt-2" />
+            </div>
 
-                <!-- Password -->
-                <div class="mb-4">
-                    <x-input-label for="password" :value="__('Password')" class="text-gray-700" />
-                    <x-text-input id="password" class="block w-full mt-1 p-2 bg-gray-200 border border-gray-300 rounded-md focus:border-blue-300 focus:ring-0" type="password" name="password" required />
-                    <x-input-error :messages="$errors->get('password')" class="mt-2" />
-                </div>
+            <div class="mt-4">
+                <x-input-label for="email" :value="__('Email')" />
+                <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autocomplete="username" />
+                <x-input-error :messages="$errors->get('email')" class="mt-2" />
+            </div>
 
-                <!-- Verification Password -->
-                <div class="mb-4">
-                    <x-input-label for="password_confirmation" :value="__('Verification Password')" class="text-gray-700" />
-                    <x-text-input id="password_confirmation" class="block w-full mt-1 p-2 bg-gray-200 border border-gray-300 rounded-md focus:border-blue-300 focus:ring-0" type="password" name="password_confirmation" required />
-                    <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
-                </div>
+            <div class="mt-4">
+                <x-input-label for="password" :value="__('Password')" />
+                <x-text-input id="password" class="block mt-1 w-full"
+                                type="password"
+                                name="password"
+                                required autocomplete="new-password" />
+                <x-input-error :messages="$errors->get('password')" class="mt-2" />
+            </div>
 
-                <!-- Tombol Daftar -->
-                <div class="mb-4">
-                    <x-primary-button class="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 rounded-md">
-                        {{ __('DAFTAR') }}
-                    </x-primary-button>
-                </div>
+            <div class="mt-4">
+                <x-input-label for="password_confirmation" :value="__('Confirm Password')" />
+                <x-text-input id="password_confirmation" class="block mt-1 w-full"
+                                type="password"
+                                name="password_confirmation" required autocomplete="new-password" />
+                <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
+            </div>
 
-                <!-- Teks Sudah Punya Akun -->
-                <p class="text-center text-sm text-gray-600">
-                    Sudah punya akun? <a href="{{ route('login') }}" class="text-blue-500 hover:underline">Masuk yuk!</a>
-                </p>
-            </form>
-        </div>
+            <div class="flex items-center justify-end mt-4">
+                <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('login') }}">
+                    {{ __('Already registered?') }}
+                </a>
+
+                <x-primary-button class="ms-4">
+                    {{ __('Register') }}
+                </x-primary-button>
+            </div>
+        </form>
     </div>
 </x-guest-layout>
