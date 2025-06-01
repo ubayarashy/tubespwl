@@ -1,6 +1,13 @@
-<x-guest-layout>
-    <div class="flex items-center justify-center">
-        <div class="bg-white p-6 rounded-[30px] shadow-lg w-full max-w-md">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    @vite(['resources/css/app.css', 'resources/js/app.js']) {{-- Untuk Laravel Breeze --}}
+</head>
+<body class="min-h-screen flex items-center justify-center px-4" style="background: url('{{ asset('images/bg.png') }}') no-repeat center center fixed; background-size: cover;">
+
+   <div class="bg-white p-6 rounded-[30px] shadow-lg w-full max-w-md">
             <!-- Logo -->
             <div class="flex justify-center mb-6">
                 <a href="/">
@@ -32,12 +39,13 @@
                     <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
                 </div>
 
-                <!-- Tombol Daftar -->
-                <div class="mb-4">
-                    <x-primary-button class="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 rounded-[30px]">
-                        {{ __('DAFTAR') }}
-                    </x-primary-button>
-                </div>
+              <!-- Bungkus tombol dengan div flex justify-center -->
+<div class="mb-4 flex justify-center">
+    <x-primary-button class="bg-blue-500 hover:bg-blue-600 active:bg-blue-700 text-white font-bold py-2 px-16 rounded-[30px]">
+        {{ __('DAFTAR') }}
+    </x-primary-button>
+</div>
+
 
                 <!-- Teks Sudah Punya Akun -->
                 <p class="text-center text-sm text-gray-600">
@@ -45,5 +53,5 @@
                 </p>
             </form>
         </div>
-    </div>
-</x-guest-layout>
+</body>
+</html>
