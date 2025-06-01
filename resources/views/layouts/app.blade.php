@@ -35,7 +35,7 @@
     </style>
 </head>
 <body class="bg-gray-100">
-    <nav class="flex justify-between items-center max-w-7xl mx-auto">
+    <nav class="flex justify-between items-center ">
         <div class="flex items-center">
             <div class="navbar-logo">
                 <a href="{{ route('dashboard') }}">
@@ -65,7 +65,7 @@
                 <x-dropdown align="right" width="48">
                     <x-slot name="trigger">
                         <button class="flex items-center text-sm font-medium text-gray-500 hover:text-gray-700">
-                            <img src="https://via.placeholder.com/40" alt="Profile">
+                            <img src="p" alt="Profile">
                         </button>
                     </x-slot>
                     <x-slot name="content">
