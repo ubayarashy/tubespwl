@@ -178,11 +178,4 @@
         </div>
     </div>
 
-    <div class="footer">
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-    </div>
 @endsection
