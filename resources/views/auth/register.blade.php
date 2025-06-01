@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Register</title>
-    @vite(['resources/css/app.css', 'resources/js/app.js']) {{-- Untuk Laravel Breeze --}}
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body class="min-h-screen flex items-center justify-center px-4" style="background: url('{{ asset('images/bg.png') }}') no-repeat center center fixed; background-size: cover;">
 
@@ -18,11 +18,11 @@
             <form method="POST" action="{{ route('register') }}">
                 @csrf
 
-                <!-- Username -->
+                <!-- Email -->
                 <div class="mb-4">
-                    <x-input-label for="username" :value="__('Username')" class="text-gray-700" />
-                    <x-text-input id="username" class="block w-full mt-1 p-2 bg-gray-200 border border-gray-300 rounded-[100px] focus:border-blue-300 focus:ring-0" type="text" name="username" :value="old('username')" required autofocus />
-                    <x-input-error :messages="$errors->get('username')" class="mt-2" />
+                    <x-input-label for="email" :value="__('Email')" class="text-gray-700" />
+                    <x-text-input id="email" class="block w-full mt-1 p-2 bg-gray-200 border border-gray-300 rounded-[100px] focus:border-blue-300 focus:ring-0" type="email" name="email" :value="old('email')" required autofocus />
+                    <x-input-error :messages="$errors->get('email')" class="mt-2" />
                 </div>
 
                 <!-- Password -->
@@ -39,13 +39,12 @@
                     <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
                 </div>
 
-              <!-- Bungkus tombol dengan div flex justify-center -->
-<div class="mb-4 flex justify-center">
-    <x-primary-button class="bg-blue-500 hover:bg-blue-600 active:bg-blue-700 text-white font-bold py-2 px-16 rounded-[30px]">
-        {{ __('DAFTAR') }}
-    </x-primary-button>
-</div>
-
+                <!-- Bungkus tombol dengan div flex justify-center -->
+                <div class="mb-4 flex justify-center">
+                    <x-primary-button class="bg-blue-500 hover:bg-blue-600 active:bg-blue-700 text-white font-bold py-2 px-16 rounded-[30px]">
+                        {{ __('DAFTAR') }}
+                    </x-primary-button>
+                </div>
 
                 <!-- Teks Sudah Punya Akun -->
                 <p class="text-center text-sm text-gray-600">
