@@ -327,460 +327,486 @@
             top: -22px;
             right: 12px;
         }
-/* Wave dengan Lekukan-lekukan */
 
-/* Quote Section */
-.quote-section {
-    background: linear-gradient(180deg, #87CEEB 0%, #5F9FE8 100%);
-    padding: 100px 20px;
-    text-align: center;
-    position: relative;
-    overflow: visible;
-}
+        /* Wave dengan Lekukan-lekukan */
+        /* Quote Section */
+        .quote-section {
+            background: linear-gradient(180deg, #87CEEB 0%, #5F9FE8 100%);
+            padding: 100px 20px;
+            text-align: center;
+            position: relative;
+            overflow: visible;
+        }
 
-/* Wave dengan lekukan tajam (default) */
-.quote-section::after {
-    content: '';
-    position: absolute;
-    bottom: -1px;
-    left: 0;
-    width: 100%;
-    height: 80px;
-    background: #98B563;
-    clip-path: polygon(
-        0% 100%, 
-        5% 80%, 
-        10% 60%, 
-        15% 70%, 
-        25% 50%, 
-        35% 65%, 
-        45% 45%, 
-        55% 60%, 
-        65% 40%, 
-        75% 55%, 
-        85% 35%, 
-        95% 50%, 
-        100% 30%, 
-        100% 100%
-    );
-    z-index: 1;
-}
+        /* Wave dengan lekukan tajam (default) */
+        .quote-section::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 100%;
+            height: 80px;
+            background: #98B563;
+            clip-path: polygon(
+                0% 100%, 
+                5% 80%, 
+                10% 60%, 
+                15% 70%, 
+                25% 50%, 
+                35% 65%, 
+                45% 45%, 
+                55% 60%, 
+                65% 40%, 
+                75% 55%, 
+                85% 35%, 
+                95% 50%, 
+                100% 30%, 
+                100% 100%
+            );
+            z-index: 1;
+        }
 
-/* Wave bulat (lembut dan tidak tajam) */
-.bulat-wavy::after {
-    content: '';
-    position: absolute;
-    bottom: -1px;
-    left: 0;
-    width: 100%;
-    height: 60px;
-    background: #98B563;
-    border-radius: 100% 100% 0 0;
-    transform: scaleX(1.5);
-    transform-origin: bottom;
-    z-index: 1;
-}
+        /* Wave bulat (lembut dan tidak tajam) */
+        .bulat-wavy::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 100%;
+            height: 60px;
+            background: #98B563;
+            border-radius: 100% 100% 0 0;
+            transform: scaleX(1.5);
+            transform-origin: bottom;
+            z-index: 1;
+        }
 
-/* Varian lain (biarkan tetap ada) */
-.smooth-wavy::after { ... } /* biarkan seperti semula */
-.dramatic-wavy::after { ... }
-.organic-wavy::after { ... }
-.double-wavy::before { ... }
-.double-wavy::after { ... }
-.animated-wavy::after { ... }
-.soft-curves::after { ... }
-.mountain-wavy::after { ... }
+        /* Varian lain (biarkan tetap ada) */
+        .smooth-wavy::after { /* biarkan seperti semula */ }
+        .dramatic-wavy::after { }
+        .organic-wavy::after { }
+        .double-wavy::before { }
+        .double-wavy::after { }
+        .animated-wavy::after { }
+        .soft-curves::after { }
+        .mountain-wavy::after { }
 
-/* Responsive waves */
-@media (max-width: 768px) {
-    .quote-section::after,
-    .smooth-wavy::after,
-    .dramatic-wavy::after,
-    .organic-wavy::after,
-    .bulat-wavy::after {
-        height: 50px;
-    }
+        /* Responsive waves */
+        @media (max-width: 768px) {
+            .quote-section::after,
+            .smooth-wavy::after,
+            .dramatic-wavy::after,
+            .organic-wavy::after,
+            .bulat-wavy::after {
+                height: 50px;
+            }
 
-    .dramatic-wavy::after {
-        height: 70px;
-    }
+            .dramatic-wavy::after {
+                height: 70px;
+            }
 
-    .mountain-wavy::after {
-        height: 60px;
-    }
-}
+            .mountain-wavy::after {
+                height: 60px;
+            }
+        }
 
-@media (max-width: 480px) {
-    .quote-section::after,
-    .smooth-wavy::after,
-    .organic-wavy::after,
-    .bulat-wavy::after {
-        height: 40px;
-    }
+        @media (max-width: 480px) {
+            .quote-section::after,
+            .smooth-wavy::after,
+            .organic-wavy::after,
+            .bulat-wavy::after {
+                height: 40px;
+            }
 
-    .dramatic-wavy::after {
-        height: 50px;
-    }
+            .dramatic-wavy::after {
+                height: 50px;
+            }
 
-    .mountain-wavy::after {
-        height: 45px;
-    }
-}
-
-/* Usage Instructions:
-   Tambahkan class berikut ke .quote-section untuk variasi:
-   - Default: otomatis ada lekukan tajam
-   - .smooth-wavy: lekukan halus
-   - .dramatic-wavy: lekukan dramatic
-   - .organic-wavy: lekukan natural banyak
-   - .double-wavy: gelombang berlapis
-   - .animated-wavy: lekukan bergerak
-   - .mountain-wavy: seperti pegunungan
-   - .bulat-wavy: ombak bulat dan lembut ✅
-*/
+            .mountain-wavy::after {
+                height: 45px;
+            }
+        }
 
         /* Categories Section - Refined & Integrated */
-.categories-section {
-    background: linear-gradient(180deg, 
- #98B563 0%, 
-  #98B563 15%, 
-  #98B563 25%, 
-         #98B563 40%, 
-         #98B563 60%, 
-         #98B563 80%, 
-        #98B563 100%
-    );
-    padding: 0;
-    text-align: center;
-    position: relative;
-    min-height: 100vh;
-    overflow: hidden;
-}
+        .categories-section {
+            background: linear-gradient(180deg, 
+                #98B563 0%, 
+                #98B563 15%, 
+                #98B563 25%, 
+                #98B563 40%, 
+                #98B563 60%, 
+                #98B563 80%, 
+                #98B563 100%
+            );
+            padding: 0;
+            text-align: center;
+            position: relative;
+            min-height: 100vh;
+            overflow: hidden;
+        }
 
-/* Smooth wave transition from previous section */
+        /* Wave separator between categories and contact section */
+        .categories-section::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 100%;
+            height: 80px;
+            background: linear-gradient(135deg, #deb887, #f4a460);
+            clip-path: polygon(
+                0% 100%, 
+                5% 80%, 
+                10% 60%, 
+                15% 70%, 
+                25% 50%, 
+                35% 65%, 
+                45% 45%, 
+                55% 60%, 
+                65% 40%, 
+                75% 55%, 
+                85% 35%, 
+                95% 50%, 
+                100% 30%, 
+                100% 100%
+            );
+            z-index: 1;
+        }
 
-/* Animated clouds */
+        @media (max-width: 768px) {
+            .categories-section::after {
+                height: 50px;
+            }
+        }
 
+        @media (max-width: 480px) {
+            .categories-section::after {
+                height: 40px;
+            }
+        }
 
-/* Flying birds */
-.bird {
-    position: absolute;
-    color: rgba(51, 51, 51, 0.6);
-    font-size: 14px;
-    animation: flyAcross 35s infinite linear;
-    font-family: Arial, sans-serif;
-}
+        /* Animated clouds */
 
-.bird1 {
-    top: 18%;
-    left: -60px;
-    animation-delay: 0s;
-}
+        /* Flying birds */
+        .bird {
+            position: absolute;
+            color: rgba(51, 51, 51, 0.6);
+            font-size: 14px;
+            animation: flyAcross 35s infinite linear;
+            font-family: Arial, sans-serif;
+        }
 
-.bird2 {
-    top: 22%;
-    left: -60px;
-    animation-delay: -8s;
-}
+        .bird1 {
+            top: 18%;
+            left: -60px;
+            animation-delay: 0s;
+        }
 
-.bird3 {
-    top: 25%;
-    left: -60px;
-    animation-delay: -16s;
-}
+        .bird2 {
+            top: 22%;
+            left: -60px;
+            animation-delay: -8s;
+        }
 
-@keyframes flyAcross {
-    0% { transform: translateX(-60px); }
-    100% { transform: translateX(calc(100vw + 60px)); }
-}
+        .bird3 {
+            top: 25%;
+            left: -60px;
+            animation-delay: -16s;
+        }
 
-/* Rolling hills background */
+        @keyframes flyAcross {
+            0% { transform: translateX(-60px); }
+            100% { transform: translateX(calc(100vw + 60px)); }
+        }
 
-/* Main content */
-.categories-content {
-    position: relative;
-    z-index: 10;
-    padding: 120px 20px 60px;
-}
+        /* Rolling hills background */
 
-.categories-title {
-    font-size: clamp(24px, 5vw, 36px);
-    font-weight: 800;
-    color: #DC143C;
-    margin-bottom: 80px;
-    text-shadow: 3px 3px 6px rgba(255,255,255,0.6);
-    font-family: 'Comic Sans MS', cursive;
-    letter-spacing: 2px;
-    position: relative;
-}
+        /* Main content */
+        .categories-content {
+            position: relative;
+            z-index: 10;
+            padding: 120px 20px 60px;
+        }
 
-.categories-title::after {
-    content: '✨';
-    position: absolute;
-    right: -40px;
-    top: -10px;
-    font-size: 0.8em;
-    animation: twinkle 2s infinite ease-in-out;
-}
+        .categories-title {
+            font-size: clamp(24px, 5vw, 36px);
+            font-weight: 800;
+            color: #DC143C;
+            margin-bottom: 80px;
+            text-shadow: 3px 3px 6px rgba(255,255,255,0.6);
+            font-family: 'Comic Sans MS', cursive;
+            letter-spacing: 2px;
+            position: relative;
+        }
 
-@keyframes twinkle {
-    0%, 100% { opacity: 0.7; transform: scale(1); }
-    50% { opacity: 1; transform: scale(1.2); }
-}
+        .categories-title::after {
+            content: '✨';
+            position: absolute;
+            right: -40px;
+            top: -10px;
+            font-size: 0.8em;
+            animation: twinkle 2s infinite ease-in-out;
+        }
 
-.categories-container {
-    max-width: 700px;
-    margin: 0 auto;
-    position: relative;
-}
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.7; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.2); }
+        }
 
-.categories-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 50px;
-    justify-items: center;
-    align-items: center;
-    margin-bottom: 60px;
-    padding: 20px;
-}
+        .categories-container {
+            max-width: 700px;
+            margin: 0 auto;
+            position: relative;
+        }
 
-.category-item {
-    width: 160px;
-    height: 160px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 700;
-    color: white;
-    font-size: 18px;
-    text-transform: uppercase;
-    box-shadow: 
-        0 10px 25px rgba(0,0,0,0.15),
-        0 5px 15px rgba(0,0,0,0.1),
-        inset 0 2px 5px rgba(255,255,255,0.3);
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    cursor: pointer;
-    position: relative;
-    font-family: 'Arial', sans-serif;
-    letter-spacing: 1px;
-    overflow: hidden;
-}
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 50px;
+            justify-items: center;
+            align-items: center;
+            margin-bottom: 60px;
+            padding: 20px;
+        }
 
-.category-item::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-radius: 50%;
-    background: linear-gradient(135deg, rgba(255,255,255,0.3), transparent);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
+        .category-item {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: white;
+            font-size: 18px;
+            text-transform: uppercase;
+            box-shadow: 
+                0 10px 25px rgba(0,0,0,0.15),
+                0 5px 15px rgba(0,0,0,0.1),
+                inset 0 2px 5px rgba(255,255,255,0.3);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            position: relative;
+            font-family: 'Arial', sans-serif;
+            letter-spacing: 1px;
+            overflow: hidden;
+        }
 
-.category-item:hover::before {
-    opacity: 1;
-}
+        .category-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(255,255,255,0.3), transparent);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
 
-.category-item:hover {
-    transform: scale(1.15) translateY(-10px);
-    box-shadow: 
-        0 20px 40px rgba(147, 192, 166, 0.25),
-        0 10px 25px rgba(0,0,0,0.15),
-        inset 0 2px 5px rgba(255,255,255,0.4);
-}
+        .category-item:hover::before {
+            opacity: 1;
+        }
 
-.category-item:active {
-    transform: scale(1.05) translateY(-5px);
-}
+        .category-item:hover {
+            transform: scale(1.15) translateY(-10px);
+            box-shadow: 
+                0 20px 40px rgba(147, 192, 166, 0.25),
+                0 10px 25px rgba(0,0,0,0.15),
+                inset 0 2px 5px rgba(255,255,255,0.4);
+        }
 
-/* Category specific styles */
-.category-math {
-    background: linear-gradient(135deg, #FF69B4, #FF1493, #DC143C);
-    grid-column: 1;
-    grid-row: 1;
-}
+        .category-item:active {
+            transform: scale(1.05) translateY(-5px);
+        }
 
-.category-social {
-    background: linear-gradient(135deg, #4682B4, #1E90FF, #0066CC);
-    grid-column: 2;
-    grid-row: 1;
-}
+        /* Category specific styles */
+        .category-math {
+            background: linear-gradient(135deg, #FF69B4, #FF1493, #DC143C);
+            grid-column: 1;
+            grid-row: 1;
+        }
 
-.category-math2 {
-    background: linear-gradient(135deg, #DC143C, #B22222, #8B0000);
-    grid-column: 3;
-    grid-row: 1;
-    position: relative;
-}
+        .category-social {
+            background: linear-gradient(135deg, #4682B4, #1E90FF, #0066CC);
+            grid-column: 2;
+            grid-row: 1;
+        }
 
-.category-math2::after {
-    content: '';
-    position: absolute;
-    top: -5px;
-    left: -5px;
-    right: -5px;
-    bottom: -5px;
-    border-radius: 50%;
-    border: 3px dashed #DC143C;
-    opacity: 0.8;
-    animation: rotateBorder 8s infinite linear;
-}
+        .category-math2 {
+            background: linear-gradient(135deg, #DC143C, #B22222, #8B0000);
+            grid-column: 3;
+            grid-row: 1;
+            position: relative;
+        }
 
-@keyframes rotateBorder {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
+        .category-math2::after {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            border-radius: 50%;
+            border: 3px dashed #DC143C;
+            opacity: 0.8;
+            animation: rotateBorder 8s infinite linear;
+        }
 
-.category-science {
-    background: linear-gradient(135deg, #FFD700, #FFA500, #FF8C00);
-    grid-column: 1;
-    grid-row: 2;
-    position: relative;
-}
+        @keyframes rotateBorder {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
 
-.category-science::after {
-    content: '';
-    position: absolute;
-    top: -5px;
-    left: -5px;
-    right: -5px;
-    bottom: -5px;
-    border-radius: 50%;
-    border: 3px dashed #FFD700;
-    opacity: 0.8;
-    animation: rotateBorder 6s infinite linear reverse;
-}
+        .category-science {
+            background: linear-gradient(135deg, #FFD700, #FFA500, #FF8C00);
+            grid-column: 1;
+            grid-row: 2;
+            position: relative;
+        }
 
-.category-art {
-    background: linear-gradient(135deg, #20B2AA, #008B8B, #006666);
-    grid-column: 3;
-    grid-row: 2;
-}
+        .category-science::after {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            border-radius: 50%;
+            border: 3px dashed #FFD700;
+            opacity: 0.8;
+            animation: rotateBorder 6s infinite linear reverse;
+        }
 
-/* Decorative floating flowers */
-.flower {
-    position: absolute;
-    color: rgba(255,255,255,0.9);
-    font-size: 32px;
-    animation: floatFlower 4s infinite ease-in-out;
-    z-index: 5;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
-}
+        .category-art {
+            background: linear-gradient(135deg, #20B2AA, #008B8B, #006666);
+            grid-column: 3;
+            grid-row: 2;
+        }
 
-.flower1 {
-    top: 25%;
-    left: 8%;
-    animation-delay: 0s;
-}
+        /* Decorative floating flowers */
+        .flower {
+            position: absolute;
+            color: rgba(255,255,255,0.9);
+            font-size: 32px;
+            animation: floatFlower 4s infinite ease-in-out;
+            z-index: 5;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
 
-.flower2 {
-    top: 30%;
-    right: 12%;
-    animation-delay: 1s;
-}
+        .flower1 {
+            top: 25%;
+            left: 8%;
+            animation-delay: 0s;
+        }
 
-.flower3 {
-    bottom: 35%;
-    left: 5%;
-    animation-delay: 2s;
-}
+        .flower2 {
+            top: 30%;
+            right: 12%;
+            animation-delay: 1s;
+        }
 
-.flower4 {
-    bottom: 40%;
-    right: 8%;
-    animation-delay: 0.5s;
-}
+        .flower3 {
+            bottom: 35%;
+            left: 5%;
+            animation-delay: 2s;
+        }
 
-.flower5 {
-    top: 45%;
-    left: 2%;
-    animation-delay: 1.5s;
-}
+        .flower4 {
+            bottom: 40%;
+            right: 8%;
+            animation-delay: 0.5s;
+        }
 
-.flower6 {
-    top: 50%;
-    right: 3%;
-    animation-delay: 2.5s;
-}
+        .flower5 {
+            top: 45%;
+            left: 2%;
+            animation-delay: 1.5s;
+        }
 
-@keyframes floatFlower {
-    0%, 100% { 
-        transform: translateY(0px) rotate(0deg) scale(1); 
-        opacity: 0.8; 
-    }
-    50% { 
-        transform: translateY(-15px) rotate(180deg) scale(1.1); 
-        opacity: 1; 
-    }
-}
+        .flower6 {
+            top: 50%;
+            right: 3%;
+            animation-delay: 2.5s;
+        }
 
-/* Responsive design */
-@media (max-width: 768px) {
-    .categories-content {
-        padding: 100px 15px 40px;
-    }
-    
-    .categories-title {
-        margin-bottom: 60px;
-    }
-    
-    .categories-grid {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(3, 1fr);
-        gap: 35px;
-        padding: 15px;
-    }
-    
-    .category-item {
-        width: 140px;
-        height: 140px;
-        font-size: 16px;
-    }
-    
-    .category-math2 {
-        grid-column: 1;
-        grid-row: 2;
-    }
-    
-    .category-science {
-        grid-column: 2;
-        grid-row: 2;
-    }
-    
-    .category-art {
-        grid-column: 1;
-        grid-row: 3;
-        grid-column-end: 3;
-    }
-    
-    .hill1, .hill2, .hill3 {
-        height: 120px;
-    }
-    
-    .cloud1, .cloud2, .cloud3 {
-        transform: scale(0.7);
-    }
-}
+        @keyframes floatFlower {
+            0%, 100% { 
+                transform: translateY(0px) rotate(0deg) scale(1); 
+                opacity: 0.8; 
+            }
+            50% { 
+                transform: translateY(-15px) rotate(180deg) scale(1.1); 
+                opacity: 1; 
+            }
+        }
 
-@media (max-width: 480px) {
-    .categories-grid {
-        gap: 25px;
-    }
-    
-    .category-item {
-        width: 120px;
-        height: 120px;
-        font-size: 14px;
-    }
-    
-    .flower {
-        font-size: 24px;
-    }
-}
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .categories-content {
+                padding: 100px 15px 40px;
+            }
+            
+            .categories-title {
+                margin-bottom: 60px;
+            }
+            
+            .categories-grid {
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(3, 1fr);
+                gap: 35px;
+                padding: 15px;
+            }
+            
+            .category-item {
+                width: 140px;
+                height: 140px;
+                font-size: 16px;
+            }
+            
+            .category-math2 {
+                grid-column: 1;
+                grid-row: 2;
+            }
+            
+            .category-science {
+                grid-column: 2;
+                grid-row: 2;
+            }
+            
+            .category-art {
+                grid-column: 1;
+                grid-row: 3;
+                grid-column-end: 3;
+            }
+            
+            .hill1, .hill2, .hill3 {
+                height: 120px;
+            }
+            
+            .cloud1, .cloud2, .cloud3 {
+                transform: scale(0.7);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .categories-grid {
+                gap: 25px;
+            }
+            
+            .category-item {
+                width: 120px;
+                height: 120px;
+                font-size: 14px;
+            }
+            
+            .flower {
+                font-size: 24px;
+            }
+        }
+
         /* Contact Section */
         .contact-section {
             background: linear-gradient(135deg, #deb887, #f4a460);
@@ -1060,70 +1086,59 @@
         </div>
     </div>
 
-    
-
-
-
     <!-- Categories Section -->
-<div class="categories-section">
-    <!-- Animated Sky Elements -->
-    <div class="cloud cloud1"></div>
-    <div class="cloud cloud2"></div>
-    <div class="cloud cloud3"></div>
-    
-    <!-- Flying Birds -->
-    <div class="bird bird1">⌃</div>
-    <div class="bird bird2">⌃</div>
-    <div class="bird bird3">⌃</div>
-    
-    <!-- Rolling Hills Background -->
-    <div class="hills-bg">
-        <div class="hill hill1"></div>
-        <div class="hill hill2"></div>
-        <div class="hill hill3"></div>
-    </div>
-    
-    <!-- Main Content -->
-    <div class="categories-content">
-        <h1 class="categories-title">MAU BELAJAR APA HARI INI?</h1>
+    <div class="categories-section">
+        <!-- Animated Sky Elements -->
+        <div class="cloud cloud1"></div>
+        <div class="cloud cloud2"></div>
+        <div class="cloud cloud3"></div>
         
-        <div class="categories-container">
-            <!-- Floating Decorative Flowers -->
-            <div class="flower flower1">✿</div>
-            <div class="flower flower2">❀</div>
-            <div class="flower flower3">✻</div>
-            <div class="flower flower4">❀</div>
-            <div class="flower flower5">✿</div>
-            <div class="flower flower6">✻</div>
+        <!-- Flying Birds -->
+        <div class="bird bird1">⌃</div>
+        <div class="bird bird2">⌃</div>
+        <div class="bird bird3">⌃</div>
+        
+        <!-- Rolling Hills Background -->
+        <div class="hills-bg">
+            <div class="hill hill1"></div>
+            <div class="hill hill2"></div>
+            <div class="hill hill3"></div>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="categories-content">
+            <h1 class="categories-title">MAU BELAJAR APA HARI INI?</h1>
             
-            <!-- Categories Grid -->
-            <div class="categories-grid">
-                <div class="category-item category-math" onclick="selectCategory('MATH')">
-                    MATH
+            <div class="categories-container">
+                <!-- Floating Decorative Flowers -->
+                <div class="flower flower1">✿</div>
+                <div class="flower flower2">❀</div>
+                <div class="flower flower3">✻</div>
+                <div class="flower flower4">❀</div>
+                <div class="flower flower5">✿</div>
+                <div class="flower flower6">✻</div>
+                
+                <!-- Categories Grid -->
+                <div class="categories-grid">
+                    <div class="category-item category-math" onclick="selectCategory('MATH')">
+                        MATH
+                    </div>
+                    <div class="category-item category-social" onclick="selectCategory('SOCIAL')">
+                        SOCIAL
+                    </div>
+                    <div class="category-item category-math2" onclick="selectCategory('MATH 2')">
+                        MATH 2
+                    </div>
+                    <div class="category-item category-science" onclick="selectCategory('SCIENCE')">
+                        SCIENCE
+                    </div>
+                    <div class="category-item category-art" onclick="selectCategory('ART')">
+                        ART
+                    </div>
                 </div>
-                <div class="category-item category-social" onclick="selectCategory('SOCIAL')">
-                    SOCIAL
-                </div>
-                <div class="category-item category-math2" onclick="selectCategory('MATH 2')">
-                    MATH 2
-                </div>
-                <div class="category-item category-science" onclick="selectCategory('SCIENCE')">
-                    SCIENCE
-                </div>
-                <div class="category-item category-art" onclick="selectCategory('ART')">
-                    ART
-                </div>
-                <!-- Wave Separator -->
-<div class="wave-container">
-    <svg viewBox="0 0 1440 320">
-        <path fill="#ffffff" fill-opacity="1" d="M0,224L48,218.7C96,213,192,203,288,181.3C384,160,480,128,576,106.7C672,85,768,75,864,96C960,117,1056,171,1152,181.3C1248,192,1344,160,1392,144L1440,128L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
-    </svg>
-</div>
-
             </div>
         </div>
     </div>
-</div>
 
     <!-- Contact Section -->
     <div class="contact-section">
